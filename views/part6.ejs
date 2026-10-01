@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<section class="jojo-resume">
+  <div>
+    <img src="/img/Jolyne.png" alt="jolyne-kujo" />
+  </div>
+
+  <section class="jojo-resume-text">
+    <h3>Part 6: Stone Ocean</h3>
+    <p>
+      Em 2011, na Flórida, Jolyne Cujoh é condenada injustamente a 15 anos de prisão no presídio de segurança máxima Green Dolphin Street. Lá, ela desperta seu Stand, Stone Free, através de um pingente enviado por seu pai distante, Jotaro Kujo. Quando Jotaro tenta resgatá-la, cai em uma armadilha armada pelo capelão do presídio, Padre Enrico Pucci, tendo suas memórias e seu Stand roubados em forma de discos pelo temível Whitesnake. Agora, Jolyne precisa liderar um grupo improvável de aliados para recuperar os discos de seu pai e impedir um plano de alcance cósmico arquitetado pela vontade póstuma de DIO.
+    </p>
+  </section>
+</section>
+
+<section class="characters-section">
+  <h2 class="section-title">Destaque de Personagens</h2>
+  
+  <div class="table-container">
+    <table class="characters-table">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nome</th>
+          <th>Stand</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% characters.forEach(character => { %>
+          <tr>
+            <td class="col-img">
+              <img src="<%= character.img %>" alt="<%= character.nome %>" class="character-avatar" />
+            </td>
+            <td class="col-name">
+              <strong><%= character.nome %></strong>
+            </td>
+            <td class="col-stand">
+              <span class="stand-badge"><%= character.stand %></span>
+            </td>
+            <td class="col-desc">
+              <%= character.desc %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</body>
+</html>

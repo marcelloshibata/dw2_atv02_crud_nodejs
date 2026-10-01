@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c;
+    font-family: "Roboto", sans-serif;
+    padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 32px;
+    background-color: #121212;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.logo-tipo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-tipo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-tipo h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 24px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #EB008B;
+}
+
+.jojo-resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    max-width: 1100px;
+    margin: 90px auto 50px auto;
+    padding: 24px;
+}
+
+.jojo-resume img {
+    width: 380px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.jojo-resume-text {
+    flex: 1;
+}
+
+.jojo-resume-text h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.jojo-resume-text p {
+    color: #d1d1d1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.institutional-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.institutional-text h2 {
+    color: #ffffff;
+}
+
+/* Seção e Tabela de Personagens (Minimalista) */
+.characters-section {
+    max-width: 1100px;
+    margin: 40px auto 80px auto;
+    padding: 0 24px;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2d2d2d;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #212121;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.characters-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.characters-table thead {
+    background-color: #181818;
+}
+
+.characters-table th {
+    padding: 16px 20px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid #333333;
+}
+
+.characters-table tbody tr {
+    border-bottom: 1px solid #2b2b2b;
+    transition: background-color 0.2s ease;
+}
+
+.characters-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.characters-table tbody tr:hover {
+    background-color: #282828;
+}
+
+.characters-table td {
+    padding: 16px 20px;
+    vertical-align: middle;
+}
+
+/* Padronização da imagem dos personagens */
+.col-img {
+    width: 90px;
+    text-align: center;
+}
+
+.character-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #333333;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.characters-table tbody tr:hover .character-avatar {
+    transform: scale(1.05);
+    border-color: #EB008B;
+}
+
+
+.col-name {
+    width: 180px;
+    color: #ffffff;
+    font-size: 1.05rem;
+    white-space: nowrap;
+}
+
+.col-name:hover {
+    color: #EB008B;
+    cursor: pointer;
+}
+
+.col-stand {
+    width: 170px;
+    white-space: nowrap;
+}
+
+.stand-badge {
+    display: inline-block;
+    color: #EB008B;
+    background-color: rgba(235, 0, 139, 0.1);
+    border: 1px solid rgba(235, 0, 139, 0.25);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.col-desc {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 0.92rem;
+    text-align: justify;
+}

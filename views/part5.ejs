@@ -1,0 +1,67 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<section class="jojo-resume">
+  <div>
+    <img src="/img/diavolo.png" alt="diavolo" />
+  </div>
+
+  <section class="jojo-resume-text">
+    <h3>Part 5: Vento Aureo (Golden Wind)</h3>
+    <p>
+      Em 2001, Koichi Hirose chega a Nápoles em busca de uma amostra de pele de
+      um jovem chamado Haruno Shiobana. Jotaro Kujo suspeita que Haruno seja
+      filho de Dio Brando, concebido com o corpo de Jonathan Joestar antes dos
+      eventos de Stardust Crusaders. Koichi logo conhece e é enganado por
+      Haruno, agora conhecido pelo nome de Giorno Giovanna, cujo Stand Gold
+      Experience pode criar formas de vida e curar ferimentos. Depois de
+      derrotar um mafioso empunhando Stand chamado Bruno Bucciarati, que foi
+      enviado para vingar o ferimento que Giorno infligiu a um membro de uma
+      gangue, o jovem conquista Bucciarati ao revelar seu sonho de se tornar um
+      chefe da máfia para melhorar Nápoles e acabar com o flagelo do tráfico de
+      drogas que assola a juventude da cidade. Bucciarati concorda em introduzir
+      Giorno na organização Passione, permitindo que Giorno faça um teste de
+      iniciação do capo Polpo, com obesidade mórbida. Depois de convencer Koichi
+      a encerrar sua investigação, Giorno passa no teste, mas indiretamente mata
+      Polpo como vingança pela morte de um espectador inocente.
+    </p>
+  </section>
+</section>
+
+<section class="characters-section">
+  <h2 class="section-title">Destaque de Personagens</h2>
+  
+  <div class="table-container">
+    <table class="characters-table">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nome</th>
+          <th>Stand</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% characters.forEach(character => { %>
+          <tr>
+            <td class="col-img">
+              <img src="<%= character.img %>" alt="<%= character.nome %>" class="character-avatar" />
+            </td>
+            <td class="col-name">
+              <strong><%= character.nome %></strong>
+            </td>
+            <td class="col-stand">
+              <span class="stand-badge"><%= character.stand %></span>
+            </td>
+            <td class="col-desc">
+              <%= character.desc %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</body>
+</html>
