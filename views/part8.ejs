@@ -1,0 +1,54 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<section class="jojo-resume">
+  <div>
+    <img src="/img/josuke.png" alt="josuke-higashikata" />
+  </div>
+
+  <section class="jojo-resume-text">
+    <h3>Part 8: JoJolion</h3>
+    <p>
+      Em 2011, após o grande terremoto e tsunami de Tōhoku devastarem a costa do Japão, formações geológicas misteriosas apelidadas de "Olhos da Parede" emergem nos arredores de Morioh. A universitária Yasuho Hirose encontra um rapaz enterrado sob o solo, privado de todas as suas memórias e portando uma estranha marca estelar. Adotado pela prestigiada família Higashikata com o nome de Josuke, ele se lança numa intrigante investigação para descobrir a sua verdadeira identidade, deparando-se com os segredos ancestrais da miraculosa fruta Locacaca e enfrentando a perigosa sociedade secreta dos Homens de Pedra.
+    </p>
+  </section>
+</section>
+
+<section class="characters-section">
+  <h2 class="section-title">Destaque de Personagens</h2>
+  
+  <div class="table-container">
+    <table class="characters-table">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nome</th>
+          <th>Stand</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% characters.forEach(character => { %>
+          <tr>
+            <td class="col-img">
+              <img src="<%= character.img %>" alt="<%= character.nome %>" class="character-avatar" />
+            </td>
+            <td class="col-name">
+              <strong><%= character.nome %></strong>
+            </td>
+            <td class="col-stand">
+              <span class="stand-badge"><%= character.stand %></span>
+            </td>
+            <td class="col-desc">
+              <%= character.desc %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<section class="jojo-resume">
+  <div>
+    <img src="/img/Gyro.png" alt="Gyro-zeppeli" />
+  </div>
+
+  <section class="jojo-resume-text">
+    <h3>Part 7: Steel Ball Run</h3>
+    <p>
+      Ambientada em 1890 nos Estados Unidos, a história acompanha a Steel Ball Run, uma corrida continental épica de cavalos de 6.000 quilômetros com largada em San Diego e chegada em Nova York, oferecendo um prêmio de 50 milhões de dólares. Johnny Joestar, um ex-prodígio do turfe que perdeu o movimento das pernas, decide entrar na competição após testemunhar o enigmático carrasco napolitano Gyro Zeppeli utilizar as Esferas de Aço, descobrindo que o segredo do 'Spin' pode fazê-lo voltar a andar. Ao longo do caminho, ambos descobrem que a corrida é uma manobra planejada pelo presidente Funny Valentine para localizar as relíquias místicas do Sagrado Cadáver e conceder poder inabalável à sua nação.
+    </p>
+  </section>
+</section>
+
+<section class="characters-section">
+  <h2 class="section-title">Destaque de Personagens</h2>
+  
+  <div class="table-container">
+    <table class="characters-table">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nome</th>
+          <th>Stand</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% characters.forEach(character => { %>
+          <tr>
+            <td class="col-img">
+              <img src="<%= character.img %>" alt="<%= character.nome %>" class="character-avatar" />
+            </td>
+            <td class="col-name">
+              <strong><%= character.nome %></strong>
+            </td>
+            <td class="col-stand">
+              <span class="stand-badge"><%= character.stand %></span>
+            </td>
+            <td class="col-desc">
+              <%= character.desc %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</body>
+</html>
