@@ -13,4 +13,22 @@ route.get("/part6", (req, res) => {
   })
 });
 
+route.post("/part6/signup", (req, res) => {
+  const nome = req.body.nome;
+  const stand = req.body.stand;
+  const desc = req.body.desc;
+  const img = req.body.img;
+
+  Part6.create({
+    img: img,
+    nome: nome,
+    desc: desc,
+    stand: stand,
+  }).then(() => {
+    res.redirect("/part6");
+  }).catch(error => {
+    console.log(`Houve um erro ao cadastrar o personagem da parte 6. Erro: ${error}`);
+  })
+})
+
 export default route;

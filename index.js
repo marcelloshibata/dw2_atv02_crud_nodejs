@@ -14,6 +14,8 @@ import Part6 from "./model/Part6.js";
 import Part7 from "./model/Part7.js";
 import Part8 from "./model/Part8.js";
 
+app.use(express.urlencoded({extended: false}))
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
