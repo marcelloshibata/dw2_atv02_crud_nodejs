@@ -81,7 +81,9 @@
               <button type="button" class="btn-action btn-edit">Editar</button>
             </td>
             <td class="col-action">
-              <button type="button" class="btn-action btn-delete">Deletar</button>
+              <a href="/part6/delete/<%= character.id %>" onclick="return confirm('Deseja mesmo excluir o personagem <%= character.nome %>?')">
+                <button type="button" class="btn-action btn-delete">Deletar</button>
+              </a>
             </td>
           </tr>
         <% }) %>

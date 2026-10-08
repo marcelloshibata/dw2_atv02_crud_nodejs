@@ -31,4 +31,18 @@ route.post("/part6/signup", (req, res) => {
   })
 })
 
+route.get("/part6/delete/:id", (req, res) => {
+  const id = req.params.id;
+
+  Part6.destroy({
+    where: {
+      id: id,
+    },
+  }).then(() => {
+    res.redirect("/part6");
+  }).catch((error) => {
+    console.log(`Ocorreu um erro ao excluir o personagem de ID ${id}. Erro: ${error}`);
+  })
+})
+
 export default route;
