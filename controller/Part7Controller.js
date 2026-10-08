@@ -49,4 +49,48 @@ route.get("/part7/delete/:id", (req, res) => {
   })
 })
 
+route.get("/part7/edit/:id", (req, res) => {
+  const id = req.params.id;
+
+  Part7.findByPk(id)
+    .then((part7) => {
+      res.render("part7Editar", {
+        character: part7,
+      });
+    })
+    .catch((error) => {
+      console.log(
+        `Ocorreu um erro ao buscar personagem para editar. Erro: ${error}`,
+      );
+    });
+});
+
+route.post("/part7/update/:id", (req, res) => {
+  const id = req.params.id;
+  const nome = req.body.nome;
+  const stand = req.body.stand;
+  const desc = req.body.desc;
+  const img = req.body.img;
+
+  Part7.update(
+    {
+      nome: nome,
+      stand: stand,
+      desc: desc,
+      img: img,
+    },
+    {
+      where: { id: id },
+    },
+  )
+    .then(() => {
+      res.redirect("/part7");
+    })
+    .catch((error) => {
+      console.log(
+        `Ocorreu um erro ao alterar o personagem ${id}. Erro: ${error}`,
+      );
+    });
+});
+
 export default route;

@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+
+<section class="form-section">
+  <h2 class="section-title">Editar Personagem</h2>
+
+  <div class="form-container">
+    <form class="character-form" action="/part6/update/<%= character.id %>" method="POST">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="nome">Nome do Personagem</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite o nome do personagem" required value="<%= character.nome %>"/>
+        </div>
+
+        <div class="form-group">
+          <label for="stand">Stand</label>
+          <input type="text" id="stand" name="stand" placeholder="Digite o nome do Stand" required value="<%= character.stand %>"/>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="img">URL da Foto / Imagem</label>
+          <input type="text" id="img" name="img" placeholder="Ex: /img/giorno-icon.jpg" required value="<%= character.img %>"/>
+        </div>
+
+        <div class="form-group full-width">
+          <label for="desc">Descrição</label>
+          <textarea id="desc" name="desc" rows="4" placeholder="Digite uma breve descrição do personagem..." required></textarea>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-submit" onclick="return confirm('Deseja mesmo alterar o personagem <%= character.nome %>?')">Alterar Personagem</button>
+      </div>
+      <a href="/part6">
+        <button type="button" class="btn-submit btn-cancel">Cancelar</button>
+      </a>
+    </form>
+  </div>
+</section>
+
+    
+</body>
+</html>

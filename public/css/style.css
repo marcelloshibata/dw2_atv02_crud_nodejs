@@ -390,6 +390,10 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
 }
 
+.btn-cancel {
+    background-color: #ef4444;
+}
+
 .btn-action:active {
     transform: translateY(0);
 }
