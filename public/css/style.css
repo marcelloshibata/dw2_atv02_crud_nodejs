@@ -411,3 +411,44 @@ nav ul li a:hover {
         width: 100%;
     }
 }
+/* Botão Cancelar do formulário de edição */
+.form-actions-split {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-cancel-form {
+    display: inline-block;
+    background-color: #ef4444;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.35);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cancel-form:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.5);
+}
+
+@media (max-width: 768px) {
+    .form-actions-split {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-cancel-form {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
